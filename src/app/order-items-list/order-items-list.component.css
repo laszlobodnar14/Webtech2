@@ -1,0 +1,71 @@
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Table header styling */
+table tr:first-child {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table tr:first-child td {
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Table cell styling */
+table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+}
+
+/* Alternate row coloring */
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover effect */
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Total row styling */
+table tr:last-child {
+  background-color: #f8f9fa;
+  border-top: 2px solid #dee2e6;
+  font-weight: bold;
+}
+
+/* Price columns alignment */
+table td:nth-child(2),
+table td:nth-child(3),
+table td:nth-child(5) {
+  text-align: right;
+}
+
+/* Quantity column alignment */
+table td:nth-child(4) {
+  text-align: center;
+}
+
+/* Currency formatting */
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  table td {
+    padding: 8px 5px;
+    font-size: 0.9em;
+  }
+
+  table tr:first-child td {
+    padding: 10px 5px;
+  }
+}

@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+.details {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  animation: fadeIn 0.6s ease-out;
+  transition: all 0.3s ease;
+}
+
+.details:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+app-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+app-title h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+text-input {
+  display: block;
+  position: relative;
+}
+
+.default-button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.login {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.login a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.login a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Input field animations */
+text-input {
+  --primary-color: #3498db;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .details {
+    padding: 1.5rem;
+  }
+
+  app-title h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    gap: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Validation states */
+.ng-invalid.ng-touched label {
+  color: var(--error-color);
+}
+
+.ng-valid.ng-touched label {
+  color: var(--success-color);
+}
+
+/* Floating label effect (if your text-input supports it) */
+text-input:focus-within label {
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}

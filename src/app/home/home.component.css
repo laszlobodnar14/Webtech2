@@ -1,0 +1,103 @@
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+li {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+
+.content {
+  padding: 20px;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.footer {
+  margin-top: 15px;
+}
+
+.footer div {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer div:last-child {
+  margin-bottom: 0;
+}
+
+
+.marka::before,
+.tipus::before,
+.teljesitmeny::before,
+.suly::before,
+[class="Berleti dij"]::before,
+.letet::before {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.marka::before { content: "Márka: "; }
+.tipus::before { content: "Típus: "; }
+.teljesitmeny::before { content: "Teljesítmény: "; }
+.suly::before { content: "Súly: "; }
+[class="Berleti dij"]::before { content: "Bérleti díj/Nap: "; }
+.letet::before { content: "Biztonsági letét: "; }
+
+
+.footer div span {
+  color: #7f8c8d;
+}
+
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 15px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .footer div {
+    font-size: 0.9rem;
+  }
+}

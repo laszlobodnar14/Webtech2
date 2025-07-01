@@ -1,0 +1,44 @@
+<app-title title="Cart Page" margin=" 1.5rem 0 0 2.5 rem"></app-title>
+
+
+<div class="cart-items">
+  <div *ngFor="let cartitem of cart.items" class="cart-item">
+    <div class="item-info">
+      <h3 class="item-name">
+        <a routerLink="/gep/{{cartitem.gep.id}}">{{cartitem.gep.name}}</a>
+      </h3>
+
+      <div class="item-controls">
+        <select class="quantity-select"
+                [value]="cartitem.quantity"
+                (change)="changeQuantity(cartitem, quantitySelect.value)"
+                #quantitySelect>
+          <option *ngFor="let q of [1,2,3,4,5,6,7]">{{q}}</option>
+        </select>
+
+        <div class="item-price">{{ cartitem.price  }} EUR</div>
+
+        <button class="remove-btn" (click)="removeFromCart(cartitem)">
+          <i class="material-icons">delete</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart-summary">
+  <div class="summary-row">
+    <span>Total Items:</span>
+    <span class="value">{{cart.totalCount}}</span>
+  </div>
+
+  <div class="summary-row">
+    <span>Total Price:</span>
+    <span class="value">{{cart.totalPrice }} EUR</span>
+  </div>
+
+  <button class="checkout-btn" routerLink="/checkout">
+    Proceed to Checkout
+    <i class="material-icons">arrow_forward</i>
+  </button>
+</div>

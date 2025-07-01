@@ -1,0 +1,9 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name" placeholder="Név" />
+  <input formControlName="email" placeholder="Email" />
+  <input formControlName="ambassador" placeholder="Kapcsolattartó" />
+  <input formControlName="taxnum" placeholder="Adószám" />
+  <input formControlName="address" placeholder="Cím" />
+  <input formControlName="password" type="password" placeholder="Új jelszó (opcionális)" />
+  <button type="submit">Mentés</button>
+</form>

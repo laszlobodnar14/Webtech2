@@ -1,0 +1,37 @@
+.balance-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.balance-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.balance-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.balance-form button {
+  width: 100%;
+  padding: 0.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.balance-form button:hover {
+  background: #0056b3;
+}

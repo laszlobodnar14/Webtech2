@@ -1,0 +1,37 @@
+<ul>
+  <li *ngFor="let gep of gepek">
+    <a routerLink="/gep/{{gep.id}}">
+      <div class="content">
+        <div class="name">
+          {{gep.name}}
+        </div>
+        <div class="footer">
+          <div class="marka">
+           {{gep.marka}}
+          </div>
+          <div class="tipus">
+           {{gep.tipus}}
+          </div>
+          <div class="teljesitmeny">
+            {{gep.teljesitmeny}} W
+          </div>
+          <div class="suly">
+            {{gep.suly}} kg
+          </div>
+          <div class="Berleti dij">
+             {{gep.berletidij |  currency:'EUR' :'symbol':'1.0-0'}}
+          </div>
+          <div class="letet">
+             {{gep.letet |  currency:'EUR' :'symbol':'1.0-0'}}
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+<div *ngIf="userService.currentUser.isAdmin">
+  <a routerLink="/gepregister">
+    <default-button text="Gep felvetele"></default-button>
+  </a>
+</div>
+

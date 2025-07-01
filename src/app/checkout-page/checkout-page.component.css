@@ -1,0 +1,117 @@
+/* Container styling */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Content area styling */
+.content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  grid-column: 1 / span 2;
+}
+
+/* Map container styling */
+.map {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Buttons container */
+.buttons-container {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Title component styling */
+app-title {
+  display: block;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .content, .buttons-container {
+    grid-column: 1;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .map {
+    min-height: 300px;
+  }
+}
+
+/* Additional styles for input fields if needed */
+.text-input {
+  margin-bottom: 15px;
+}
+
+/* Order items list specific styling */
+order-items-list {
+  display: block;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
